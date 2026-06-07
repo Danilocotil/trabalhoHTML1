@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulário Pokémon</title>
+	<link rel="icon" type="image/jpg" href="Imagens/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="caixatexto" id="comeco">
+		<a href="index.html" class="vermelho">
+			<img src="Imagens/favicon.ico">
+			Início
+		</a>
+		<a href="formulario.html" rel="noreferrer noopener" class="laranja selecionado">
+			<img src="Imagens/fotologin.png">
+			Registre-se
+		</a>
+	</div>
+	<main class="principal">
+	<h1>Cadastro Pokémon</h1>
+	<form>
+		<fieldset class="form">
+			<legend><small>Dados Pessoais</small></legend>
+			Nome:<br>
+			<input class="input" type="text" name="nome" id="nome" placeholder="Digite aqui" size="50" required>
+			<br><br>
+			Idade:<br>
+			<input class="input" type="number" name="idade" id="idade"><br><br>
+			E-mail:<br>
+			<input class="input" type="e-mail" name="email" id="email" placeholder="Digite seu e-mail" size="50"><br><br>
+			Qual o seu gênero?<br>
+			M <input id="sexo" name="sexo" type="radio" style="height: 1.2rem; width: 1.2rem;">
+			F <input id="sexo" name="sexo" type="radio" style="height: 1.2rem; width: 1.2rem;">
+			Outro(a) <input id="sexo" name="sexo" type="radio" style="height: 1.2rem; width: 1.2rem;">
+		</fieldset>
+		<fieldset class="form dois">
+			<legend><small>Dados sobre Pokemon:</small></legend>
+			Qual o seu inicial de kanto favorito?<br>
+			<select class="input">
+				<option></option>
+				<option>Bulbasaur</option>
+				<option>Ivysaur</option>
+				<option>Venusaur</option>
+				<option>Charmander</option>
+				<option>Charmeleon</option>
+				<option>Charizard</option>
+				<option>Squirtle</option>
+				<option>Wartortle</option>
+				<option>Blastoise</option>
+			</select><br><br>
+			Quais tipos você gosta?<br>
+			<div class="list">
+			<span class="tipo normal">Normal</span><input type="checkbox" name="normal" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo fogo">Fogo</span><input type="checkbox" name="fogo" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo agua">Água</span><input type="checkbox" name="agua" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo planta">Planta</span><input type="checkbox" name="planta" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo eletrico">Elétrico</span><input type="checkbox" name="eletrico" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo gelo">Gelo</span><input type="checkbox" name="gelo" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo lutador">Lutador</span><input type="checkbox" name="lutador" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo venenoso">Venenoso</span><input type="checkbox" name="venenoso" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo terrestre">Terrestre</span><input type="checkbox" name="terrestre" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo voador">Voador</span><input type="checkbox" name="voador" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo psiquico">Psíquico</span><input type="checkbox" name="psiquico" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo inseto">Inseto</span><input type="checkbox" name="inseto" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo pedra">Pedra</span><input type="checkbox" name="pedra" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo fantasma">Fantasma</span><input type="checkbox" name="fantasma" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo dragao">Dragão</span><input type="checkbox" name="dragao" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo sombrio">Sombrio</span><input type="checkbox" name="sobrio" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo aco">Aço</span><input type="checkbox" name="aco" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			<span class="tipo fada">Fada</span><input type="checkbox" name="fada" id="tipo" style="height: 1.6rem; width: 1.6rem;"><br><br>
+			</div>
+		</fieldset>
+		<br><br>
+		<input type="submit" id="cadastrar" value="Cadastre-se" height=" 100px" width="500px">
+	</form>
+
+	<br><br><br><br><br><br>a
+	<footer><a href="#comeco"><img src="Imagens/logopokemon.png" class="imagem"></a></footer>
+	</main>
+</body>
+</html>
