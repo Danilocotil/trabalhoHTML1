@@ -1,7 +1,20 @@
 body{
 	margin: 0;
+	margin-bottom: 100px;
 	font-family: Arial;
 	background-color: rgba(0, 0, 0, 0.15);
+}
+.pokefonte{
+	font-family: 'Pokemon Solid', sans-serif;
+	font-size: 15px;
+	color: #ffcb05;
+	letter-spacing: 6.7px;
+	text-shadow: 
+	-2px -2px 0 #3b5ca8,
+	2px -2px 0 #3b5ca8,
+	-2px 2px 0 #3b5ca8,
+	2px 2px 0 #3b5ca8;
+	cursor:pointer;
 }
 
 .principal{
@@ -14,7 +27,7 @@ body{
 	display: flex;
 	align-items: flex-start;
 	width: 100%;
-	background-color: #222;
+	background-color: #333;
 	padding: 1.1rem;
 	box-sizing: border-box;
 	border-bottom: 3px solid #f00;
@@ -34,6 +47,7 @@ body{
 	padding: 0.5rem 1rem;
 	width: 6rem;
 	transition: background-color 0.2s, transform 0.2s;
+	box-shadow: 4px 4px 2px rgb(0, 0, 0);
 }
 
 .caixatexto img {
@@ -57,6 +71,8 @@ body{
 
 .laranja{
 	border-bottom: 3px solid #f70;
+	position:absolute;
+	right: 1rem;
 }
 
 .laranja.selecionado{
@@ -82,12 +98,107 @@ body{
 .caixatexto span {
 	font-size: 1rem;
 }
+.logo{
+	width: 100%;
+	height: 100%;
+}
+details{
+	list-style: none;
+	position: absolute;
+	top: 7.43rem;
+	left: 0rem;
+	z-index: 1;
+	padding: 0.6rem 0.75rem;
+	background: rgba(34, 34, 34, 0.98);
+	border: 2px solid #f00;
+	border-radius: 0.8rem;
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+summary {
+	list-style: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.25rem 0.5rem 0.35rem;
+	border-radius: 0.5rem;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+summary:hover {
+	background: rgba(255, 255, 255, 0.08);
+	transform: translateY(-1px);
+}
+
+details[open] > summary {
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+details ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+details li{
+	margin: 0.5rem;
+}
+
+
+
+.ul{
+	font-family: 'Pokemon Solid', sans-serif;
+	text-decoration: none;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.08);
+	border: 2px solid #f00;
+	border-radius: 0.6rem;
+	padding: 0.55rem 0.8rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.ul:hover {
+	transform: translateX(0.4rem);
+	background-color: rgba(255, 255, 255, 0.14);
+	box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+.bulba{
+	color: #7AC74C;
+}
+.char{
+	color: #EE8130;
+}
+.squir{
+	color: #6390F0;
+}
+.sitepokemon{
+	font-family: 'Pokemon Solid', sans-serif;
+	font-weight:bold;
+	font-size: 2rem;
+	font-style: italic;
+	text-decoration: none;
+	color: rgb(16, 165, 41);
+	text-shadow: 
+	-2px -2px 0 #eeea0d,
+	2px -2px 0 #eeea0d,
+	-2px 2px 0 #eeea0d,
+	2px 2px 0 #eeea0d;
+}
+.sitepokemon:hover{
+	transition: translateY(-4px);
+}
 
 .tipo{
 	border-radius: 0.5rem;
 	color: #000;
 	font-weight: bold;
 	padding: 1rem;
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.67);
+	text-align: center;
+	font-size: 1rem;
+	width: 4rem;
 }
 
 .planta{
@@ -168,11 +279,28 @@ body{
 	border-radius: 1rem;
 	text-align: center;
 	font-size: 25px;
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
 .tabela img{
 	height: 200px;
 	width: 200px;
+}
+.tabela img:hover{
+	animation: pulinho 0.2s ease infinite, rodar 0.5s ease infinite;
+}
+@keyframes rodar{
+	0%, 100% { rotate: 0deg; }
+	15% { rotate: 30deg; }
+	40%, 60% { rotate: 0deg; }
+	85% { rotate: -30deg; }
+}
+
+@keyframes pulinho{
+	0%, 100% { translate: 0 0; }
+	15% { translate: 0 0; }
+	40%, 60% { translate: 0 -25px; }
+	85% { translate: 0 0; }
 }
 
 .tabela td{
@@ -188,21 +316,150 @@ body{
 }
 
 .form{
+	border: none;
 	font-size: 2rem;
+	border: rgba(0, 0, 0, 0.67) 1px solid;
+	border-radius: 40px;
+	padding: 25px;
 }
-
 .list{
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	border: rgba(0, 0, 0, 0.67) 1px solid;
+	border-radius: 40px;
+	padding: 3rem;
 }
 
 .form.dois{
+	border: none;
 	font-size: 2rem;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	border: rgba(0, 0, 0, 0.67) 1px solid;
+	border-radius: 40px;
+	padding: 25px;
 }
 
-.input{
-	font-size: 1.2  rem;
+input[type="text"], input[type="e-mail"], input[type="password"]{
+	font-family: 'Pokemon Solid', sans-serif;
+	font-size: 1.2rem;
+	color: #ffcb05;
+	text-shadow: 
+	-2px -2px 0 #3b5ca8,
+	2px -2px 0 #3b5ca8,
+	-2px 2px 0 #3b5ca8,
+	2px 2px 0 #3b5ca8;
+	letter-spacing: 0.2rem;
+	background-color: transparent;
+	border: transparent;
+	border-bottom: 1px solid #000;
+	border-radius: 2px;
+	width: 100%;
+	padding: 2px;
+	text-indent: 10px;
+}
+
+input[type="number"]{
+	font-family: 'Pokemon Solid', sans-serif;
+	font-size: 1.2rem;
+	color: #ffcb05;
+	text-shadow: 
+	-2px -2px 0 #3b5ca8,
+	2px -2px 0 #3b5ca8,
+	-2px 2px 0 #3b5ca8,
+	2px 2px 0 #3b5ca8;
+	letter-spacing: 0.2rem;
+	background-color: transparent;
+	border: transparent;
+	border-bottom: 1px solid #000;
+	padding: 5px;
+	text-indent: 15px;
+}
+
+input[type="text"]:focus, input[type="e-mail"]:focus, input[type="password"]:focus, input[type="number"]:focus{
+	outline: none;
+	border-bottom: 2px solid #000;
+}
+
+form{
+	width: 67%;
+	border: rgba(0, 0, 0, 0.67) 1px solid;
+	border-radius: 40px;
+	padding: 25px;
+	gap: 2rem;
+}
+
+input[type="submit"]{
+	width: 100%;
+	border-color: rgba(0, 0, 0, 0.4);
+	border-radius: 50px;
+	background-color: lime;
+	color: #000;
+	cursor:pointer;
+	padding: 10px;
+	font-size: larger;
+	font-weight: bold;
+	transition: transform 0.4s ease-in-out;
+}
+
+input[type="submit"]:hover{
+	transform: translateY(-5px);
+	background-color: #57d111 ;
+}
+
+.img{
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	box-sizing: border-box;
+	height: 100%;
+	opacity: 0.2;
+	float: none;
+}
+.tipoform{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	border: rgba(0, 0, 0, 0.67) 1px solid;
+	border-radius: 20px;
+	height: 10rem;
+	padding: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+.tipoform img{
+	height: 3rem;
+	width: 3rem;
+	align-self: center;
+}
+.tipoform input{
+	color: #000;
+	background-color: #8b2121;
+	align-self: center;
+}
+select{
+	background: rgba(0, 0, 0, 0.40);
+	font-family: 'Pokemon Solid', sans-serif;
+	font-size: 1rem;
+	color: #ffcb05;
+	text-shadow: 
+	-2px -2px 0 #3b5ca8,
+	2px -2px 0 #3b5ca8,
+	-2px 2px 0 #3b5ca8,
+	2px 2px 0 #3b5ca8;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+input[type="checkbox"]{
+	height: 1.6rem;
+	width: 6rem;
+	align-self: center;
 }
 
 footer{
@@ -214,4 +471,5 @@ footer{
 	left: 0;
 	width: 100%;
 	background-color: #222;
+	z-index: 2;
 }
